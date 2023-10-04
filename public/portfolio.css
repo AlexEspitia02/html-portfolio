@@ -1,0 +1,56 @@
+.project-box{
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    overflow:hidden; /*超出容器範圍時隱藏超出範圍*/
+    text-align: center;
+    background-color: #FAF0E6;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.me{
+    text-align: center;
+}
+
+img{
+    width:85%;
+}
+
+body{
+    background-color: #B9B4C7;
+    margin: 0;
+}
+
+h1{
+    color: white;
+    background-color: #352F44;
+    padding-left: 10px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lilita One', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: normal;
+}
+
+h2{
+    color: #EFE1D1;
+    background-color: #5C5470;
+    padding-left: 10px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lilita One', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: normal;
+}
+
+h3>a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration:none;
+    color: #352F44;
+}
+
+div>a{
+    font-family: 'Roboto', sans-serif;
+    color: #352F44;
+}
