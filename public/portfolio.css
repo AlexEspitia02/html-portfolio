@@ -15,6 +15,7 @@
 
 img{
     width:85%;
+    object-fit: cover;
 }
 
 body{
