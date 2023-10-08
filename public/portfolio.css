@@ -13,6 +13,13 @@
     text-align: center;
 }
 
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 30px;
+    justify-content: center;
+}
+
 img{
     width:85%;
     object-fit: cover;
