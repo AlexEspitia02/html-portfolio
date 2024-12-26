@@ -1,65 +1,325 @@
-.project-box{
-    display: inline-block;
-    height: 250px;
-    width: 250px;
-    overflow:hidden; /*超出容器範圍時隱藏超出範圍*/
-    text-align: center;
-    background-color: #FAF0E6;
-    border-radius: 15px;
-    margin-left: 10px;
+/* 全域設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
 }
 
-.me{
-    text-align: center;
+body {
+    background-color: #1A1A1A; /* 深黑背景 */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #EAEAEA; /* 淺灰文字色調 */
+    line-height: 1.6;
 }
 
-.flex-box{
+/* Landing Page Header */
+header {
+    background: #FFF;
+}
+
+nav{
     display: flex;
-    flex-wrap: wrap;
-    gap:20px;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.navItems {
+    display: flex;
+}
+
+.navItems li{
+    list-style: none;
+    margin:0 15px;
+}
+
+.navItems li a{
+    font-size: 25px;
+    color: #3d5d5f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links a:hover{
+    color:#EAEAEA;
+}
+
+.links a{
+    font-size: 30px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+.container{
+    width: 100%;
+    min-height: 90vh;
+    background: #FFF;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 40px);
     justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
 }
 
-img{
-    width:85%;
-    object-fit: cover;
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height:600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top:40%;
+    background: linear-gradient(45deg,#7f00ff,pink);
+    animation: object1 6s linear infinite;
 }
 
-body{
-    background-color: #B9B4C7;
-    margin: 0px;
-    padding: 0px;
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 35%;
+    top:12%;
+    background: linear-gradient(45deg,#7f00ff,pink);
+    animation: object1 6s linear infinite;
+}
+
+.cols{
+    width: 50%;
+}
+
+.cols0{
+    width: 60%;
+    z-index: 5;
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color:#3d535f;
+}
+
+.topline::after{
+    position:absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #7f00ff;
 }
 
 h1{
-    color: white;
-    background-color: #352F44;
-    padding-left: 10px;
-    font-family: 'Caveat', cursive;
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Lilita One', cursive;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: normal;
+    display: block;
+    font-size: 5em;
+    font-weight: 900;
+    color:#3d535f
 }
 
-h2{
-    color: #EFE1D1;
-    background-color: #5C5470;
-    padding-left: 10px;
-    font-family: 'Caveat', cursive;
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Lilita One', cursive;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: normal;
+.multiText{
+    color: #7f00ff;
+    text-transform: capitalize;
 }
 
-h3>a{
-    font-family: 'Roboto', sans-serif;
-    text-decoration:none;
-    color: #352F44;
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color:#3d535f;
 }
 
-div>a{
-    font-family: 'Roboto', sans-serif;
-    color: #352F44;
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color:#FFF;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:hover{
+    background-color: #7f00ff;
+}
+
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.imgbox img {
+    position: absolute; /* 使圖片能夠重疊 */
+    width: 100%;
+    height: auto;
+}
+
+.imgbox #splash {
+    z-index: 1; /* 最底層 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    width: 160%;
+    filter: saturate(150%);
+}
+
+/* 彈性盒子布局 */
+.flex-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #1F1F1F; /* 深灰背景，強化對比 */
+    align-items: stretch;
+}
+
+/* 專案盒子樣式 */
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #222222; /* 深黑背景 */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); /* 強烈陰影效果 */
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+}
+
+.project-box:hover {
+    transform: translateY(-10px) scale(1.05); /* 浮動效果加放大 */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid #333333;
+}
+
+.project-box h3 {
+    margin: 15px 0;
+    font-size: 1.4rem;
+    color: #FFA07A; /* 橘色標題 */
+}
+
+.project-box h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.project-box h3 a:hover {
+    color: #FFDAB9; /* 更亮的橘色效果 */
+}
+
+/* 全屏背景圖設計 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(18, 18, 18, 1) 70%);
+    z-index: -1;
+}
+
+/* 關於和聯繫區塊 */
+.me {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background: linear-gradient(90deg, #1F1F1F, #333333);
+    position: relative;
+    overflow: hidden;
+}
+
+.me a {
+    text-decoration: none;
+    color: #FF6F61;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.me a:hover {
+    color: #FFA07A;
+    transform: scale(1.1);
+}
+
+.me::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #FF6F61, #FFA07A);
+}
+
+/* 圖片全域樣式 */
+.flex-box img {
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.flex-box img:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* 分隔線樣式 */
+hr {
+    border: none;
+    border-top: 1px solid #333333;
+    margin: 40px 0;
+}
+
+/* 額外的交互效果 */
+.project-box:hover h3 {
+    color: #FFDAB9; /* 滑過專案變化顏色 */
+    text-shadow: 0px 0px 8px rgba(255, 160, 122, 0.8);
 }

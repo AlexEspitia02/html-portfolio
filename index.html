@@ -1,77 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Alex Espitia's Portfolio</title>
-        <link rel="stylesheet" href="./public/portfolio.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Lilita+One&family=Orbitron&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Alex Espitia's Portfolio</h1>
-        <h2>I'm a Web Developer</h2>
-        <hr/>
-        <div class="flex-box">
-            <div class="project-box">
-                <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
-                <img src="./assets/images/portfolio-images/movie-ranking.png" alt="我最愛的3個電影"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Espitia's Portfolio</title>
+    <link rel="stylesheet" href="./public/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">logo</div>
+            <ul class="navItems">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">skills</a></li>
+                <li><a href="#">blog</a></li>
+            </ul>
+            <div class="links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-            <div class="project-box">
-                <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
-                <img src="./assets/images/portfolio-images/birthday-invite.png" alt="生日邀請卡"/>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multiText"></span></h1>
+                <p>123123123123123123</p>
+                <div class="btns">
+                    <button>download CV</button>
+                    <button>hire me</button>
+                </div>
             </div>
-            <div class="project-box">
-                <h3><a href="./public/color-vocab-project.html">Color Vocab Project</a></h3>
-                <img src="./assets/images/portfolio-images/color-vocab-project.png" alt="顏色西語單字"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/motivational-post.html">Motivational Post Website</a></h3>
-                <img src="./assets/images/portfolio-images/motivational-post-website.png" alt="勵志貼文"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/css-flag .html">CSS Flag Project</a></h3>
-                <img src="./assets/images/portfolio-images/the-flag-of-Laos.png" alt="寮國國旗"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/web-design-agency-project.html">Web Design Agency Project</a></h3>
-                <img src="./assets/images/portfolio-images/web-design-agency-project.png" alt="設計公司網站"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/flexbox-pricing-table-project.html">Flexbox Pricing Table Project</a></h3>
-                <img src="./assets/images/portfolio-images/flexbox-pricing-table-project.png" alt="設計公司網站"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/mondrian-roject.html">Mondrian Project</a></h3>
-                <img src="./assets/images/portfolio-images/mondrian-roject.png" alt="蒙德里安的畫"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/TinDog-project.html">TinDog Project</a></h3>
-                <img src="./assets/images/portfolio-images/TinDog-project.png" alt="TinDog"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="https://latin-america-hotel.my.canva.site/">Web Design in Practice</a></h3>
-                <img src="./assets/images/portfolio-images/Web-Design-project.png" alt="南美飯店"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/dicee.html">Dicee Challenge</a></h3>
-                <img src="./assets/images/portfolio-images/dicee.png" alt="骰子挑戰"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="./public/drum-kit.html">Drum Kit</a></h3>
-                <img src="../html-portfolio/assets/images/portfolio-images/drum-kit.png" alt="打鼓"/>
-            </div>
-            <div class="project-box">
-                <h3><a href="../html-portfolio/public/Simon-Game-Challenge.html">Simon Game Challenge</a></h3>
-                <img src="../html-portfolio/assets/images/portfolio-images/Simon-Game-Challenge.png" alt="Simon Game"/>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="./assets/images/portfolio-images/background.png" id="splash">
+                    <img src="./assets/images/portfolio-images/portrait.png" id="splash">
+                </div>
             </div>
         </div>
-        <hr/>
-        <div class="me">
+    </section>
+<!-- 
+        <h1>Alex Espitia's Portfolio</h1>
+        <h2>I'm a Web Developer</h2> -->
+
+    <hr />
+
+    <!-- Projects Section -->
+    <section class="flex-box">
+        <!-- Individual Project Box -->
+        <div class="project-box">
+            <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
+            <img src="./assets/images/portfolio-images/movie-ranking.png" alt="我最愛的3個電影">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
+            <img src="./assets/images/portfolio-images/birthday-invite.png" alt="生日邀請卡">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/color-vocab-project.html">Color Vocab Project</a></h3>
+            <img src="./assets/images/portfolio-images/color-vocab-project.png" alt="顏色西語單字">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/motivational-post.html">Motivational Post Website</a></h3>
+            <img src="./assets/images/portfolio-images/motivational-post-website.png" alt="勵志貼文">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/css-flag.html">CSS Flag Project</a></h3>
+            <img src="./assets/images/portfolio-images/the-flag-of-Laos.png" alt="寮國國旗">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/web-design-agency-project.html">Web Design Agency Project</a></h3>
+            <img src="./assets/images/portfolio-images/web-design-agency-project.png" alt="設計公司網站">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/flexbox-pricing-table-project.html">Flexbox Pricing Table Project</a></h3>
+            <img src="./assets/images/portfolio-images/flexbox-pricing-table-project.png" alt="價格表專案">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/mondrian-project.html">Mondrian Project</a></h3>
+            <img src="./assets/images/portfolio-images/mondrian-project.png" alt="蒙德里安的畫">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/TinDog-project.html">TinDog Project</a></h3>
+            <img src="./assets/images/portfolio-images/TinDog-project.png" alt="TinDog">
+        </div>
+        <div class="project-box">
+            <h3><a href="https://latin-america-hotel.my.canva.site/">Web Design in Practice</a></h3>
+            <img src="./assets/images/portfolio-images/Web-Design-project.png" alt="南美飯店">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/dicee.html">Dice Challenge</a></h3>
+            <img src="./assets/images/portfolio-images/dicee.png" alt="骰子挑戰">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/drum-kit.html">Drum Kit</a></h3>
+            <img src="./assets/images/portfolio-images/drum-kit.png" alt="打鼓">
+        </div>
+        <div class="project-box">
+            <h3><a href="./public/Simon-Game-Challenge.html">Simon Game Challenge</a></h3>
+            <img src="./assets/images/portfolio-images/Simon-Game-Challenge.png" alt="Simon Game">
+        </div>
+    </section>
+    <hr />
+
+    <!-- Footer -->
+    <footer class="me">
         <a href="./public/about.html">About Me</a>
         <a href="./public/contact.html">Contact Me</a>
-        </div>
-    </body>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script></body>
+    <script>
+        var typingEffect = new Typed(".multiText",{
+            strings:["coder","youtuber","designer"],
+            loop:true,
+            typeSpeed:100,
+            backSpeed:80,
+            backDelay:1500
+        })
+    </script>
 </html>
